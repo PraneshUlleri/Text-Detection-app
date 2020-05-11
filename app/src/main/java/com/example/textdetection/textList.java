@@ -1,6 +1,7 @@
 package com.example.textdetection;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -43,14 +44,13 @@ public class textList extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                CharSequence[] items = { "Delete"};
+                CharSequence[] items = {"Delete"};
                 AlertDialog.Builder dialog = new AlertDialog.Builder(textList.this);
                 dialog.setTitle("Choose an action");
                 dialog.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
-                        if (item==0){
-
+                        if (item==0) {
                             Cursor c= MainActivity.sqLiteHelper.getData("SELECT id from TEXT");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while(c.moveToNext()){

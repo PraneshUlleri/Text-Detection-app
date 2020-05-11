@@ -34,10 +34,20 @@ android:layout_centerHorizontal="true"
 
             android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
-            android:maxLength="15"
+
             android:text="TextView"
             android:textColor="#000"
             android:textSize="15dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="203dp"
+            android:layout_marginTop="168dp"
+            android:layout_marginEnd="202dp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
 
